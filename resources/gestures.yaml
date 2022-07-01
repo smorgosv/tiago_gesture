@@ -1,0 +1,261 @@
+
+#Gestures with the arm: section have their nine points ordered as such:
+#torso_lift_joint, arm_1_joint, arm_2_joint, arm_3_joint, arm_4_joint, arm_5_joint, arm_6_joint, arm_7_joint, arm_tool_joint
+#
+#Gestures with the gripper: section have their three points ordered as such:
+#gripper_joint, gripper_left_finger_joint, gripper_right_finger_joint
+
+play_gesture:
+  gestures: 
+
+    tuck:
+      arm:
+      - positions: [0.15, 0.2, -1.34, -0.2, 2, -1.57, 1.37, 0, 0]
+
+      gripper:
+      - positions: [0, 1, 1]
+
+      meta:
+        name: tuck
+        usage: gesture
+        description: tuck the arm in the default position
+
+    wave:
+      arm:
+      - positions: [0.2, 0, 0, -3.1, 1, 0, 0, 0, 0]
+      - positions: [0.2, 0, 0, -3.1, 2, 0, 0, 0, 0]
+      - positions: [0.2, 0, 0, -3.1, 1, 0, 0, 0, 0]
+      - positions: [0.2, 0, 0, -3.1, 2, 0, 0, 0, 0]
+      - positions: [0.2, 0, 0, -3.1, 1, 0, 0, 0, 0]
+      - positions: [0.15, 0.2, -1.34, -0.2, 2, -1.57, 1.37, 0, 0] #Return to tuck
+
+      gripper:
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+
+      meta:
+        name: wave
+        usage: gesture
+        description: waves at the user
+
+    highfive:
+      arm:
+      - positions: [0.3, 0, 0, -3.14, 1.57, 0, 0, 0, 0]
+      - positions: [0.3, 0.4, 0, -2.3, 1.4, 0, 0.8, 0, 0]
+      - positions: [0.15, 0.2, -1.34, -0.2, 2, -1.57, 1.37, 0, 0] #Return to tuck
+
+      gripper:
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+
+      meta:
+        name: highfive
+        usage: gesture
+        description: high fives the user
+
+    fistbump:
+      arm:
+      - positions: [0.2, 0, 0, -1.57, 1.57, 0, 0, 0, 0]
+      - positions: [0.2, 1.57, 0, -1.57, 0, 0, 0, 0, 0]
+      - positions: [0.2, 1.57, 1.57, -1.57, 0, 0, 0.7, -1.57, 0]
+      - positions: [0.39, -0.28, 0.45, 0.6, -2.05, 1.74, -1.20, 0.93, 0.5]
+      - positions: [0.15, 0.2, -1.34, -0.2, 2, -1.57, 1.37, 0, 0] #Return to tuck
+
+      gripper:
+      - positions: [0, 1, 1]
+      - positions: [0, 0, 0]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      meta:
+        name: fistbump
+        usage: gesture
+        description: fistbumps the user
+
+    handshake:
+      arm:
+      - positions: [0.2, 0.3, 0, -1.57, 2, 0, 0, 0, 0]
+      - positions: [0.2, 0.3, 0, -1, 2, 0, 0.5, 0, 0]
+      - positions: [0.2, 0.3, 0, -1.57, 2, 0, 0, 0, 0]
+      - positions: [0.2, 0.3, 0, -1, 2, 0, 0.5, 0, 0]
+      - positions: [0.2, 0.3, 0, -1.57, 2, 0, 0, 0, 0]
+      - positions: [0.15, 0.2, -1.34, -0.2, 2, -1.57, 1.37, 0, 0] #Return to tuck
+
+      gripper:
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 0]
+      - positions: [0, 1, 0]
+      - positions: [0, 1, 0]
+      - positions: [0, 1, 0]
+      - positions: [0, 1, 1]
+      meta:
+        name: shakehands
+        usage: gesture
+        description: presents the hand to shake with the user
+        
+    salute:
+      arm:
+      - positions: [0.3, 0.4, 0, -3.14, 1.57, 1, -1.57, 0, 0]
+      - positions: [0.3, 0.4, 0, -1.57, 1.57, 1.57, -1.57, 0, 0]
+      - positions: [0.15, 0.2, -1.34, -0.2, 2, -1.57, 1.37, 0, 0] #Return to tuck
+
+
+      gripper:
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+
+      meta:
+        name: salute
+        usage: gesture
+        description: a simple salute at the user
+        
+    robot:
+      arm:
+      - positions: [0, 0, 0, -3.14, 1.57, 0, 0, 0, 0]
+      - positions: [0.34, 0, 0, -3.14, 1.57, 0, 0, 0, 0]
+      - positions: [0.34, 3.14, 0, -3.14, 1.57, 0, 0, 0, 0]
+      - positions: [0.34, 3.14, 0, 0, 1.57, 0, 0, 0, 0]
+      - positions: [0.2, 3.14, 0, 0, 1.57, 0, 0, 0, 0]
+      - positions: [0.2, 1.57, 0, 0, 1.57, 0, 0, 0, 0]
+      - positions: [0.2, 1.57, 0, 1.57, 1.57, 0, 0, 0, 0]
+      - positions: [0.2, 1.57, 0, -1.57, 1.57, 0, 0, 0, 0]
+      - positions: [0.2, 0, 0, -1.57, 1.57, 0, 0, 0, 0]
+      - positions: [0, 0, 0, -1.57, 1.57, 0, 0, 0, 0]
+      - positions: [0, 0, 0, 0, 1.57, 0, 0, 0, 0]
+      - positions: [0.15, 0.2, -1.34, -0.2, 2, -1.57, 1.37, 0, 0] #Return to tuck
+
+
+      gripper:
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+
+      meta:
+        name: salute
+        usage: gesture
+        description: a simple salute at the user
+    
+    rock:
+      arm:
+      - positions: [0.2, 1.57, -1, -3.14, 1.57, 1.57, 0.5, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 0.9, 1.57, -0.1, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 1.57, 1.57, 0.5, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 0.9, 1.57, -0.1, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 1.57, 1.57, 0.5, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 0.9, 1.57, -0.1, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 1.57, 1.57, 0.5, 0, 0]
+      - positions: [0.2, 1.57, -0.5, -3.14, 1, 1.57, 0.5, 0, 0] #Throws Rock
+
+
+      gripper:
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 0, 0] #Closes manipulator to signify rock
+
+      meta:
+        name: rock
+        usage: gesture
+        description: throws rock after three bounces of the wrist
+        
+    paper:
+      arm:
+      - positions: [0.2, 1.57, -1, -3.14, 1.57, 1.57, 0.5, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 0.9, 1.57, -0.1, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 1.57, 1.57, 0.5, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 0.9, 1.57, -0.1, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 1.57, 1.57, 0.5, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 0.9, 1.57, -0.1, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 1.57, 1.57, 0.5, 0, 0]
+      - positions: [0.2, 1.57, -0.5, -3.14, 1, 1.57, 0.5, 0, 0] #Throws paper
+
+
+      gripper:
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1] #Keeps the manipulator open to signify paper
+
+      meta:
+        name: paper
+        usage: gesture
+        description: throws paper after three bounces of the wrist
+        
+    scissors:
+      arm:
+      - positions: [0.2, 1.57, -1, -3.14, 1.57, 1.57, 0.5, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 0.9, 1.57, -0.1, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 1.57, 1.57, 0.5, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 0.9, 1.57, -0.1, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 1.57, 1.57, 0.5, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 0.9, 1.57, -0.1, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 1.57, 1.57, 0.5, 0, 0]
+      - positions: [0.2, 1.57, -0.5, -3.14, 1, 1.57, 0.5, 1.57, 0] #Rotates the manipulator to signify scissors
+
+
+      gripper:
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1] #Keeps the manipulator open to signify scissors
+
+      meta:
+        name: scissors
+        usage: gesture
+        description: throws scissors after three bounces of the wrist
+        
+    victory:
+      arm:
+      - positions: [0.2, 1.57, 0, -3.14, 1.57, 1.57, 0, 0, 0]
+      - positions: [0.2, 1.57, -1, -3.14, 2.25, 1.57, -0.4, 0, 0]
+      - positions: [0.15, 0.2, -1.34, -0.2, 2, -1.57, 1.37, 0, 0] #Return to tuck
+
+      gripper:
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+
+      meta:
+        name: victory
+        usage: gesture
+        description: a victorious fist pump       
+     
+    loss:
+      arm:
+      - positions: [0.2, 1.57, -1.57, -3.14, 1, 1.57, 1, 0, 0]
+      - positions: [0.15, 0.2, -1.34, -0.2, 2, -1.57, 1.37, 0, 0] #Return to tuck
+
+      gripper:
+      - positions: [0, 1, 1]
+      - positions: [0, 1, 1]
+
+      meta:
+        name: loss
+        usage: gesture
+        description: a dejected arm drop
